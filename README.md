@@ -1,8 +1,35 @@
-# 🔐 Retell AI Topic 11 — Security, Rate Limits & Production Scaling
+<!-- Animated hero banner: generated SVG with lightweight CSS animation -->
+<p align="center">
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,45:312e81,100:06b6d4&height=220&section=header&text=RETELL%20AI%20SECURITY&fontSize=36&fontColor=ffffff&animation=fadeIn&fontAlignY=36&desc=Topic%2011%20%E2%80%A2%20Rate%20Limits%20%E2%80%A2%20Scaling&descAlignY=56&descSize=16" alt="Animated Retell AI Security banner" width="100%" />
+</p>
+
+<h1 align="center">🔐 Retell AI Topic 11 — Security, Rate Limits & Production Scaling</h1>
+<p align="center">
+  <a href="https://github.com/shaikshahid777/retell-ai-topic-11-security-rate-limits-scaling"><img src="https://img.shields.io/badge/Project-GitHub-181717?style=for-the-badge&logo=github" alt="GitHub repository" /></a>
+  <a href="https://www.loom.com/share/f1c7be1e674a44eb8095342f2336f992"><img src="https://img.shields.io/badge/Watch-Loom%20Demo-625DF5?style=for-the-badge&logo=loom&logoColor=white" alt="Watch Loom demo" /></a>
+  <a href="Topic_11_Assessment_Report_Final_Audio_Update.pdf"><img src="https://img.shields.io/badge/Read-Assessment%20PDF-DC2626?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Assessment report PDF" /></a>
+  <a href="docs/test-results.md"><img src="https://img.shields.io/badge/Test-Results-0F766E?style=for-the-badge&logo=checkmarx&logoColor=white" alt="Test results" /></a>
+</p>
+
+<p align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=18&pause=1100&color=22D3EE&center=true&vCenter=true&width=760&lines=PII+Redaction+%7C+Data+Retention;DTMF+Settings+%7C+API+Key+Safety;Concurrency+Review+%7C+Honest+Test+Evidence" alt="Animated project focus text" />
+</p>
 
 **Hands-On Beginner Course | Security Configuration & Production Readiness**
 
 This repository documents security and scaling configuration reviewed for the `Trainee_Sarah_Receptionist` Retell AI agent. It distinguishes dashboard configuration from behavior actually observed in testing.
+
+> [!IMPORTANT]
+> This is a learning project, not a production security audit or compliance certification. A configured setting is not the same as a proven runtime outcome.
+
+## 🚀 Quick navigation
+
+<p align="center">
+  <a href="Topic_11_Assessment_Report_Final_Audio_Update.pdf"><img src="https://img.shields.io/badge/📄_Assessment_Report-Open_PDF-2563EB?style=for-the-badge" alt="Open assessment report" /></a>
+  <a href="https://www.loom.com/share/f1c7be1e674a44eb8095342f2336f992"><img src="https://img.shields.io/badge/▶_Demo-Watch_Video-7C3AED?style=for-the-badge" alt="Watch demo" /></a>
+  <a href="docs/test-results.md"><img src="https://img.shields.io/badge/🧪_Test_Results-View-0D9488?style=for-the-badge" alt="View test results" /></a>
+  <a href="docs/lms-submission-description.md"><img src="https://img.shields.io/badge/🎓_Submission-Details-F59E0B?style=for-the-badge" alt="Submission details" /></a>
+</p>
 
 ## Learning objectives
 - Configure PII redaction and data retention.
@@ -68,7 +95,7 @@ The course requirement document mentions **100 API requests per 10 seconds** and
 - [x] API Keys page reviewed without revealing the key
 - [x] Webhook settings reviewed without sending a test event
 - [x] One Playground test showed transcript placeholders for the name and credit card
-- [ ] Audio muting/redaction verified in recording
+- [x] Audio playback reviewed; user reported silence during the credit-card segment in this one recording
 - [ ] Secure DTMF behavior validated
 - [ ] API key rotation validated safely
 - [ ] Current API rate limit and HTTP 429 behavior verified
@@ -77,10 +104,10 @@ The course requirement document mentions **100 API requests per 10 seconds** and
 - [ ] Final screenshot evidence checked for sensitive information
 
 ## 📂 Repository contents & evidence
-- [Final updated assessment report PDF](Topic_11_Assessment_Report_Final_Updated_v2.pdf).
+- [Final assessment report PDF](Topic_11_Assessment_Report_Final_Audio_Update.pdf)
 - [PII test results](docs/test-results.md)
 - [Loom demo](demo/loom-link.md)
-- Existing configuration screenshots and the two new Call History screenshots captured on 6 October 2026 are stored in the repository root.
+- Configuration screenshots and two Call History screenshots captured on 6 October 2026 are stored in the repository root.
 
 Only add files/screenshots that were actually captured. Mask account emails, secret values, phone numbers, and all personal/customer data before publishing.
 
@@ -93,4 +120,4 @@ Only add files/screenshots that were actually captured. Mask account emails, sec
 - [User DTMF](https://docs.retellai.com/build/user-dtmf)
 
 ---
-**Built by Shaik Mohammad Shaheed** · Learning project, not a production compliance certification.
+<p align="center"><i>Built by Shaik Mohammad Shaheed · Learning project, not a production compliance certification.</i></p>
