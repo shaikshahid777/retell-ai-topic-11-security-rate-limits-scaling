@@ -26,7 +26,7 @@ This repository documents security and scaling configuration reviewed for the `T
 | Stable server | Optional paid setting left off | Paid setting intentionally not enabled |
 | Secure URLs | Observed off | Recorded; not changed |
 
-> A configured setting is not the same as a proven runtime outcome. This project confirms transcript placeholder masking in one observed test only. Audio muting, DTMF masking, retention deletion, and production behavior are not claimed as verified.
+> A configured setting is not the same as a proven runtime outcome. In the observed Playground call, the transcript showed PII placeholders and playback reportedly produced silence during the credit-card utterance. This supports the observed redaction behavior for that segment only; it does not validate every PII category or production-scale behavior.
 
 ## 🧪 PII redaction test — observed result
 
@@ -37,7 +37,7 @@ One Playground web call was made with synthetic sample personal and payment data
 - The credit-card digits appeared as `[credit card 1]`, not as readable digits.
 - The agent warned the caller not to share card details and redirected to appointment or billing help.
 
-**Result:** Transcript text masking is visible in this call. **Audio muting remains unverified** until the corresponding recording segment is inspected. See [test results](docs/test-results.md).
+**Result:** Transcript text masking is visible in this call. The recording was played back and the user reported hearing silence during the credit-card disclosure; this is recorded as an observed audio-redaction result for this call only. See [test results](docs/test-results.md).
 
 ## 📈 Concurrency & rate-limit review
 
@@ -77,10 +77,10 @@ The course requirement document mentions **100 API requests per 10 seconds** and
 - [ ] Final screenshot evidence checked for sensitive information
 
 ## 📂 Repository contents & evidence
-- [Final updated assessment report PDF](Topic_11_Assessment_Report_Final_Updated.pdf) — download this file from the ChatGPT response and upload it to the repository root before LMS submission.
+- [Final updated assessment report PDF](Topic_11_Assessment_Report_Final_Updated_v2.pdf).
 - [PII test results](docs/test-results.md)
 - [Loom demo](demo/loom-link.md)
-- Existing dashboard screenshots are stored in the repository root. The new cropped PII Call History evidence still needs to be uploaded to `screenshots/pii-redaction-call-history.jpg`.
+- Existing configuration screenshots and the two new Call History screenshots captured on 6 October 2026 are stored in the repository root.
 
 Only add files/screenshots that were actually captured. Mask account emails, secret values, phone numbers, and all personal/customer data before publishing.
 
