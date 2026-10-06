@@ -2,7 +2,7 @@
 
 - Loom video: https://www.loom.com/share/f1c7be1e674a44eb8095342f2336f992
 - Repository: https://github.com/shaikshahid777/retell-ai-topic-11-security-rate-limits-scaling
-- Assessment report: [Topic_11_Assessment_Report_Final_Updated_v2.pdf](../Topic_11_Assessment_Report_Final_Updated_v2.pdf)
+- Assessment report: [Topic_11_Assessment_Report_Final_Audio_Update.pdf](../Topic_11_Assessment_Report_Final_Updated_v2.pdf)
 - PII test notes: [test-results.md](../docs/test-results.md)
 
 The video demonstrates the Retell AI security/scaling configuration and one Playground PII-redaction test. Call History displayed 0:29 duration (audio player: 0:28) and a cost of $0.090. The transcript showed placeholders for the name and credit-card number, and the agent warned the caller not to share card details. The user reported hearing silence during the credit-card utterance when playing the downloaded recording. This documents the observation for one test call only; it does not prove all PII categories or production behavior.
