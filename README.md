@@ -2,7 +2,7 @@
 
 **Hands-On Beginner Course | Security Configuration & Production Readiness**
 
-This repository documents security and scaling configuration reviewed for the `Trainee_Sarah_Receptionist` Retell AI agent. It separates settings reviewed from runtime behavior that has not yet been tested.
+This repository documents security and scaling configuration reviewed for the `Trainee_Sarah_Receptionist` Retell AI agent. It separates saved settings from runtime behavior that has actually been observed.
 
 ## Learning objectives
 - Configure PII redaction and data retention.
@@ -15,7 +15,7 @@ This repository documents security and scaling configuration reviewed for the `T
 
 | Area | Current observation | Evidence status |
 |---|---|---|
-| PII redaction | 14 sensitive-data categories configured | Settings saved; runtime masking not yet demonstrated |
+| PII redaction | 14 sensitive-data categories configured | One Playground call showed transcript placeholders for the name and credit card |
 | Data storage | **Everything except PII** | Dashboard setting reviewed |
 | Retention | **30 days** | Setting reviewed; expiry/deletion not tested |
 | Keypad input | User Keypad Input Detection enabled; digit limit configured | Setting reviewed; secure capture not tested end-to-end |
@@ -26,7 +26,18 @@ This repository documents security and scaling configuration reviewed for the `T
 | Stable server | Optional paid setting left off | No extra charge intentionally enabled |
 | Secure URLs | Observed off | Recorded; not changed |
 
-> A configured setting is not the same as a proven runtime outcome. This project does not claim transcript/audio redaction, secure DTMF masking, retention deletion, or production behavior was successfully tested unless supporting evidence is added.
+> A configured setting is not the same as a proven runtime outcome. This project confirms transcript placeholder masking in one observed test only. Audio muting, DTMF masking, retention deletion, and production behavior are not claimed as verified.
+
+## 🧪 PII redaction test — observed result
+
+One Playground web call was made with synthetic sample personal and payment data.
+- Displayed duration: **28 seconds**
+- Displayed call cost: **$0.090**
+- Transcript masked the name with a placeholder such as `[person name 1]`.
+- Credit-card digits appeared as `[credit card 1]`, rather than readable digits.
+- The agent warned the caller not to share card details and redirected to appointment or billing help.
+
+**Result:** Transcript text masking was visible in this call. **Audio muting remains unverified** and must not be described as successful until the recording segment is inspected. See [test results](docs/test-results.md).
 
 ## 📈 Concurrency & rate-limit review
 
@@ -44,20 +55,9 @@ The course requirement document mentions **100 API requests per 10 seconds** and
 ## 🔑 API key & webhook safety
 - Never commit API keys, tokens, passwords, or customer data to this repository.
 - Existing secret key values remain masked; no key rotation/revocation is claimed.
-- Avoid sending test webhook events to a public webhook inspector if payloads may contain sensitive data.
+- No webhook test event was sent.
 - Webhook signature verification must be implemented and verified in the receiving backend; configuring a URL alone does not prove it is enforced.
 - Use least-privilege key permissions and plan credential rotation to avoid service disruption.
-
-## 🧪 Validation plan — pending
-These checks are not yet marked complete:
-- Verify synthetic PII redaction in transcript and recording.
-- Verify keypad digits are not exposed in spoken transcript text and confirm audio/log masking behavior.
-- Confirm retention expiry behavior with non-sensitive test data.
-- Verify the current rate-limit policy from official docs or an approved controlled test.
-- Verify backend webhook signature validation using a synthetic payload.
-- Avoid generating concurrent calls merely to hit the cap unless explicitly authorized.
-
-No test calls, load tests, rate-limit bursts, or webhook test events are represented as completed.
 
 ## ✅ Assessment checklist
 - [x] PII categories configured (14)
@@ -67,27 +67,21 @@ No test calls, load tests, rate-limit bursts, or webhook test events are represe
 - [x] Workspace concurrency/CPS settings reviewed
 - [x] API Keys page reviewed without revealing the key
 - [x] Webhook settings reviewed without sending a test event
-- [ ] API key rotation validated safely
-- [ ] Runtime transcript/audio PII redaction evidence captured
+- [x] One Playground test showed transcript placeholders for the name and credit card
+- [ ] Audio muting/redaction verified in recording
 - [ ] Secure DTMF behavior validated
+- [ ] API key rotation validated safely
 - [ ] Current API rate limit and HTTP 429 behavior verified
 - [ ] Webhook signature verification implemented/tested
-- [ ] Screenshots, report, and demo video added
+- [ ] Retention expiry/deletion tested
+- [ ] Screenshot evidence and report reviewed for sensitive information
 
-## 📂 Suggested evidence structure
-```text
-README.md
-docs/topic-11-assessment-report.pdf
-docs/implementation-notes.md
-docs/test-results.md
-screenshots/pii-redaction.png
-screenshots/retention-settings.png
-screenshots/dtmf-settings.png
-screenshots/concurrency-limits.png
-screenshots/api-keys-masked.png
-screenshots/webhook-settings.png
-demo/loom-link.md
-```
+## 📂 Repository contents & evidence
+- [Assessment report PDF](Topic_11_Security_Rate_Limits_Scaling_Assessment_Report%20(1).pdf)
+- [PII test results](docs/test-results.md)
+- [Loom demo](demo/loom-link.md)
+- Existing dashboard screenshots are stored in the repository root.
+
 Only add files/screenshots that were actually captured. Mask account emails, secret values, phone numbers, and all personal/customer data before publishing.
 
 ## 📚 References
