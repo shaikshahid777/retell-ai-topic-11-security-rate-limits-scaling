@@ -77,7 +77,7 @@ The course requirement document mentions **100 API requests per 10 seconds** and
 - [ ] Final screenshot evidence checked for sensitive information
 
 ## 📂 Repository contents & evidence
-- [Assessment report PDF currently in this repository](Topic_11_Security_Rate_Limits_Scaling_Assessment_Report%20(1).pdf). Download the final updated report from the ChatGPT response and upload it to replace this repository copy before LMS submission.
+- [Final updated assessment report PDF](Topic_11_Assessment_Report_Final_Updated.pdf) — download this file from the ChatGPT response and upload it to the repository root before LMS submission.
 - [PII test results](docs/test-results.md)
 - [Loom demo](demo/loom-link.md)
 - Existing dashboard screenshots are stored in the repository root. The new cropped PII Call History evidence still needs to be uploaded to `screenshots/pii-redaction-call-history.jpg`.
