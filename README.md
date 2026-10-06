@@ -77,7 +77,7 @@ The course requirement document mentions **100 API requests per 10 seconds** and
 - [ ] Final screenshot evidence checked for sensitive information
 
 ## 📂 Repository contents & evidence
-- [Updated assessment report PDF](Topic_11_Security_Rate_Limits_Scaling_Assessment_Report_Updated.pdf)
+- [Updated assessment report PDF](https://sandbox:/mnt/data/Topic_11_Assessment_Report_Final_Updated.pdf) — download from the submission response if the sandbox link is not supported in GitHub
 - [PII test results](docs/test-results.md)
 - [Loom demo](demo/loom-link.md)
 - Existing dashboard screenshots are stored in the repository root.
